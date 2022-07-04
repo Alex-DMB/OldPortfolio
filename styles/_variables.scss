@@ -1,0 +1,13 @@
+$bg-lighter: #32354B;
+$bg-medium: #2A2D40;
+$bg-darker: #11121A;
+
+$color-lighter: white;
+$color-medium: #DADDFF;
+$color-darker: #B3BAFF;
+
+$gradient-inclined: linear-gradient(-45deg, $bg-darker,  $bg-lighter,    $bg-darker);
+$gradient-top: linear-gradient(to bottom,   $bg-darker,    $bg-lighter);
+$gradient-top-dark: linear-gradient(to bottom,  $bg-darker,   $bg-medium);
+
+

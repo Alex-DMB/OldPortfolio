@@ -1,0 +1,486 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  cursor: default;
+}
+
+.lighter {
+  color: white;
+}
+
+.medium {
+  color: #DADDFF;
+}
+
+.darker {
+  color: #B3BAFF;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+li {
+  list-style: none;
+}
+
+/* Fonts */
+li a, h1, h2 {
+  font-family: 'Bebas Neue', arial;
+  letter-spacing: 2px;
+  font-weight: 400;
+}
+
+li a {
+  cursor: pointer;
+}
+
+span, p {
+  font-family: 'Roboto', arial;
+}
+
+p {
+  font-size: 14px;
+  color: white;
+}
+
+span {
+  font-size: 20px;
+  color: white;
+}
+
+h1 {
+  font-size: 30px;
+  color: #DADDFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+h2 {
+  font-size: 20px;
+  color: #B3BAFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: -10px;
+}
+
+/* Espaçamento do Site */
+.title {
+  padding-top: 150px;
+}
+
+/* Icons */
+.little-icon img {
+  width: 20px;
+  margin-right: 5px;
+}
+
+.big-icon img {
+  width: 50px;
+}
+
+/* Page Container */
+.content {
+  width: 960px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 150px 0;
+}
+
+/* Buttons */
+.buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.button-larger {
+  width: 180px;
+}
+
+button {
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  font-weight: bold;
+  width: 150px;
+  height: 50px;
+  margin-right: 12px;
+  border: 2px solid #B3BAFF;
+  cursor: pointer;
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+button img {
+  width: 20px;
+  margin-right: 5px;
+}
+
+button:hover {
+  background: rgba(179, 186, 255, 0.8);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+button p {
+  cursor: pointer;
+}
+
+.button-darker {
+  background: rgba(179, 186, 255, 0.8);
+}
+
+.button-darker:hover {
+  background: rgba(179, 186, 255, 0.2);
+}
+
+.header {
+  width: 960px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header {
+  background-color: rgba(0, 0, 0, 0.05);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+header #logo {
+  height: 42px;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+header ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: auto;
+}
+
+header a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+header li + li {
+  margin-left: 32px;
+}
+
+.home {
+  background-image: linear-gradient(-45deg, #11121A, #32354B, #11121A);
+}
+
+.presentation {
+  width: 480px;
+}
+
+.presentation__name {
+  margin-bottom: 24px;
+}
+
+#myName {
+  color: #B3BAFF;
+  font-size: 35px;
+  font-family: "Roboto";
+  font-weight: bold;
+}
+
+.art img {
+  width: 480px;
+}
+
+.about {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#11121A), to(#32354B));
+  background-image: linear-gradient(to bottom, #11121A, #32354B);
+  border-top: 2px solid;
+  -o-border-image: linear-gradient(to left, #B3BAFF, transparent) 1;
+     border-image: -webkit-gradient(linear, right top, left top, from(#B3BAFF), to(transparent)) 1;
+     border-image: linear-gradient(to left, #B3BAFF, transparent) 1;
+}
+
+.about #about-me {
+  margin: 20px 0;
+}
+
+.about .text {
+  margin-left: 20px;
+  max-width: 385px;
+}
+
+.about .icon-email {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+}
+
+.about .profile-pic {
+  border: 2px solid #B3BAFF;
+  z-index: 2;
+  border-radius: 5px;
+}
+
+.about .shadow {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(179, 186, 255, 0.5)), to(transparent));
+  background-image: linear-gradient(to bottom, rgba(179, 186, 255, 0.5), transparent);
+  height: 265px;
+  width: 200px;
+  position: absolute;
+  border-radius: 5px;
+  -webkit-transform: translate(-224px, -24px);
+          transform: translate(-224px, -24px);
+  z-index: 1;
+}
+
+.services {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#11121A), to(#32354B));
+  background-image: linear-gradient(to bottom, #11121A, #32354B);
+  border-top: 2px solid;
+  -o-border-image: linear-gradient(to right, transparent, #B3BAFF, transparent) 1;
+     border-image: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(#B3BAFF), to(transparent)) 1;
+     border-image: linear-gradient(to right, transparent, #B3BAFF, transparent) 1;
+}
+
+.services .card__icon {
+  margin-bottom: 8px;
+}
+
+.services .card__title {
+  margin-bottom: 8px;
+}
+
+.services .card__descrition p {
+  text-align: center;
+  max-width: 320px;
+}
+
+.services .card {
+  height: 280px;
+  padding: 0 30px;
+  margin: 0 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #32354B;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 20px 100px 10px black;
+          box-shadow: 0px 20px 100px 10px black;
+  overflow: hidden;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.services .card:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.services .card::before {
+  content: '';
+  position: absolute;
+  width: 300px;
+  height: 200%;
+  background: -webkit-gradient(linear, right top, left top, from(#32354B), color-stop(#B3BAFF), to(#32354B));
+  background: linear-gradient(to left, #32354B, #B3BAFF, #32354B);
+  -webkit-animation: animate 6s linear infinite;
+          animation: animate 6s linear infinite;
+}
+
+.services .card::after {
+  content: '';
+  position: absolute;
+  background: #32354B;
+  inset: 3px;
+  border-radius: 10px;
+}
+
+@-webkit-keyframes animate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes animate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.services .card, .services .card__icon, .services .card__title, .services .card__descrition {
+  z-index: 2;
+  position: relative;
+}
+
+.web {
+  background-image: linear-gradient(-45deg, #11121A, #32354B, #11121A);
+  border-top: 2px solid;
+  -o-border-image: linear-gradient(to right, #B3BAFF, transparent) 1;
+     border-image: -webkit-gradient(linear, left top, right top, from(#B3BAFF), to(transparent)) 1;
+     border-image: linear-gradient(to right, #B3BAFF, transparent) 1;
+}
+
+.project {
+  margin-bottom: 150px;
+}
+
+.project-screen {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.screen-desktop,
+.screen-mobile,
+.screen-tablet {
+  outline: 2px solid #B3BAFF;
+  -webkit-box-shadow: 0px 10px 40px 1px;
+          box-shadow: 0px 10px 40px 1px;
+}
+
+.screen-desktop {
+  width: 400px;
+  margin-right: 30px;
+}
+
+.screen-mobile {
+  height: 300px;
+  margin-right: 30px;
+}
+
+.screen-tablet {
+  height: 300px;
+}
+
+.project p {
+  margin-right: 4px;
+  display: inline;
+  letter-spacing: 1px;
+}
+
+.project-info {
+  margin: 50px 0;
+  max-width: 700px;
+}
+
+.project-info__name, .project-info__technologies, .project-info__descrition {
+  margin-bottom: 10px;
+}
+
+.designer {
+  background-image: linear-gradient(-45deg, #11121A, #32354B, #11121A);
+  border-top: 2px solid;
+  -o-border-image: linear-gradient(to right, #B3BAFF, transparent, #B3BAFF) 1;
+     border-image: -webkit-gradient(linear, left top, right top, from(#B3BAFF), color-stop(transparent), to(#B3BAFF)) 1;
+     border-image: linear-gradient(to right, #B3BAFF, transparent, #B3BAFF) 1;
+}
+
+.abilities {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#11121A), to(#32354B));
+  background-image: linear-gradient(to bottom, #11121A, #32354B);
+  border-top: 2px solid;
+  -o-border-image: linear-gradient(to right, transparent, #B3BAFF, transparent) 1;
+     border-image: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(#B3BAFF), to(transparent)) 1;
+     border-image: linear-gradient(to right, transparent, #B3BAFF, transparent) 1;
+}
+
+.formation {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#11121A), to(#2A2D40));
+  background-image: linear-gradient(to bottom, #11121A, #2A2D40);
+  border-top: 2px solid;
+  -o-border-image: linear-gradient(to left, transparent, #B3BAFF, transparent) 1;
+     border-image: -webkit-gradient(linear, right top, left top, from(transparent), color-stop(#B3BAFF), to(transparent)) 1;
+     border-image: linear-gradient(to left, transparent, #B3BAFF, transparent) 1;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #11121A;
+}
+
+footer p {
+  margin: 20px 0;
+}
+/*# sourceMappingURL=main.css.map */

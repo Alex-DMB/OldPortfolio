@@ -1,0 +1,38 @@
+.web{
+    background-image: $gradient-inclined;
+    border-top: 2px solid;
+    border-image: linear-gradient(to right, $color-darker, transparent) 1;
+}
+
+.project{margin-bottom: $spacing;}
+
+.project-screen{display: flex; align-items: center; justify-content: center;}
+
+.screen-desktop,
+.screen-mobile,
+.screen-tablet{
+    outline: 2px solid $color-darker;
+    box-shadow: 0px 10px 40px 1px;
+}
+
+
+.screen-desktop{
+    width: 400px;
+    margin-right: 30px;
+    
+}
+.screen-mobile{
+    height: 300px;
+    margin-right: 30px;
+}
+.screen-tablet{
+    height: 300px;
+}
+
+.project p{margin-right: 4px; display: inline; letter-spacing: 1px;}
+
+.project-info{margin: 50px 0; max-width: 700px;}
+
+.project-info__name, .project-info__technologies, .project-info__descrition{margin-bottom: 10px;}
+
+

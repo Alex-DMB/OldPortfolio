@@ -1,0 +1,5 @@
+.designer{
+    background-image: $gradient-inclined;
+    border-top: 2px solid;
+    border-image: linear-gradient(to right, $color-darker, transparent, $color-darker) 1;
+}

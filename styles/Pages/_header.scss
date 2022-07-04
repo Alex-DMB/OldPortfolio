@@ -1,0 +1,22 @@
+.header {width: 960px; margin: 0 auto; display: flex; align-items: center; justify-content: center;}
+
+
+header{
+
+
+
+    background-color: rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(5px);
+    position: sticky;
+    top: 0;
+
+    
+
+    
+    #logo{height: 42px; margin-right: auto; margin-top: 10px; margin-bottom: 10px;}
+    ul{display: flex;  margin-left: auto;}
+    a{text-decoration: none; color: $color-lighter; font-size: 20px; letter-spacing: 2px;}
+    li + li{ margin-left: 32px;}
+
+
+}

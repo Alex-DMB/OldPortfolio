@@ -1,0 +1,5 @@
+.abilities{
+    background-image: $gradient-top;
+    border-top: 2px solid;
+    border-image: linear-gradient(to right, transparent, $color-darker, transparent) 1;
+}

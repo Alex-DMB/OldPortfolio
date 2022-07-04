@@ -1,0 +1,26 @@
+.about {
+    background-image: $gradient-top;
+    border-top: 2px solid;
+    border-image: linear-gradient(to left, $color-darker, transparent) 1;
+    
+    #about-me{margin: 20px 0;}
+
+
+
+.text{
+margin-left: 20px;
+max-width: 385px;
+}
+
+
+
+.icon-email{display: flex; align-items: start;}
+
+.profile-pic{border: 2px solid $color-darker; z-index: 2; border-radius: 5px;}
+
+.shadow{
+background-image: linear-gradient(to bottom, rgba($color-darker,0.5), transparent);
+height: 265px; width: 200px; position: absolute; border-radius: 5px;
+transform: translate(-224px, -24px); z-index: 1;}
+}
+
