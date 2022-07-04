@@ -16,7 +16,7 @@ max-width: 385px;
 
 .icon-email{display: flex; align-items: start;}
 
-.profile-pic{border: 2px solid $color-darker; z-index: 2; border-radius: 5px;}
+.profile-pic{border: 2px solid $color-darker; z-index: 2; border-radius: 5px; width: 200px;}
 
 .shadow{
 background-image: linear-gradient(to bottom, rgba($color-darker,0.5), transparent);

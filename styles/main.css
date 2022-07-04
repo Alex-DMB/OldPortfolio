@@ -179,12 +179,19 @@ button p {
 }
 
 header {
+  width: 100vw;
   background-color: rgba(0, 0, 0, 0.05);
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
-  position: -webkit-sticky;
-  position: sticky;
+  position: fixed;
   top: 0;
+  z-index: 3;
+  border-bottom: 1px solid;
+  -o-border-image: linear-gradient(to left, transparent, rgba(179, 186, 255, 0.5), transparent) 1;
+     border-image: -webkit-gradient(linear, right top, left top, from(transparent), color-stop(rgba(179, 186, 255, 0.5)), to(transparent)) 1;
+     border-image: linear-gradient(to left, transparent, rgba(179, 186, 255, 0.5), transparent) 1;
+  -webkit-box-shadow: 0px 0px 100px 1px black;
+          box-shadow: 0px 0px 100px 1px black;
 }
 
 header #logo {
@@ -266,6 +273,7 @@ header li + li {
   border: 2px solid #B3BAFF;
   z-index: 2;
   border-radius: 5px;
+  width: 200px;
 }
 
 .about .shadow {
