@@ -457,6 +457,60 @@ header li + li {
      border-image: linear-gradient(to right, #B3BAFF, transparent, #B3BAFF) 1;
 }
 
+.designer section {
+  position: relative;
+  width: 960px;
+}
+
+.designer section img {
+  width: 265px;
+}
+
+.designer section .swiper {
+  width: 860px;
+}
+
+.designer section .card-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 30px 0;
+}
+
+.designer section .card-content img {
+  border: 2px solid #B3BAFF;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  opacity: 80%;
+  -webkit-box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.7);
+          box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.7);
+}
+
+.designer section .card-content img:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  opacity: 100%;
+}
+
+.designer section .swiper-button-next, .designer section .swiper-button-prev {
+  opacity: 0.7;
+  color: #B3BAFF;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.designer section .swiper-button-next:hover, .designer section .swiper-button-prev:hover {
+  opacity: 1;
+  color: #B3BAFF;
+}
+
 .abilities {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#11121A), to(#32354B));
   background-image: linear-gradient(to bottom, #11121A, #32354B);
