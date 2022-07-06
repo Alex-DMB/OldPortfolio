@@ -5,9 +5,12 @@
     cursor: default;
 }
 
+/*
 .lighter{color: $color-lighter;}
 .medium{color: $color-medium;}
 .darker{color: $color-darker;}
+*/
+
 
 .bold{font-weight: bold;}
 
@@ -16,7 +19,7 @@ li{list-style: none;}
 
 /* Fonts */
 li a,h1,h2{font-family: 'Bebas Neue', arial; letter-spacing: 2px; font-weight: 400;}
-li a{cursor: pointer;}
+li a,span a{cursor: pointer;}
 span,p{font-family: 'Roboto', arial;}
 
 

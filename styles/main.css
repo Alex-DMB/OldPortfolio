@@ -7,18 +7,11 @@
   cursor: default;
 }
 
-.lighter {
-  color: white;
-}
-
-.medium {
-  color: #DADDFF;
-}
-
-.darker {
-  color: #B3BAFF;
-}
-
+/*
+.lighter{color: $color-lighter;}
+.medium{color: $color-medium;}
+.darker{color: $color-darker;}
+*/
 .bold {
   font-weight: bold;
 }
@@ -34,7 +27,7 @@ li a, h1, h2 {
   font-weight: 400;
 }
 
-li a {
+li a, span a {
   cursor: pointer;
 }
 
@@ -619,13 +612,107 @@ header li + li {
   position: relative;
 }
 
-.formation {
+.education {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#11121A), to(#2A2D40));
   background-image: linear-gradient(to bottom, #11121A, #2A2D40);
   border-top: 2px solid;
   -o-border-image: linear-gradient(to left, transparent, #B3BAFF, transparent) 1;
      border-image: -webkit-gradient(linear, right top, left top, from(transparent), color-stop(#B3BAFF), to(transparent)) 1;
      border-image: linear-gradient(to left, transparent, #B3BAFF, transparent) 1;
+}
+
+.education img {
+  width: 50px;
+}
+
+.education .content {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.education .title-course {
+  padding: 120px 0;
+}
+
+.education .education-container {
+  width: 960px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.education .course-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 450px;
+  margin: 0 15px;
+  padding: 30px;
+  background: #32354B;
+  border: 2px solid #B3BAFF;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 10px 30px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 10px 30px 10px rgba(0, 0, 0, 0.5);
+}
+
+.education .course-card span {
+  font-weight: bold;
+}
+
+.education .course-card__status {
+  margin-bottom: 5px;
+}
+
+.education .course-card__status span {
+  color: #B3BAFF;
+  font-size: 14px;
+}
+
+.education .course-card__name {
+  margin-bottom: 10px;
+}
+
+.education .course-card__name span, .education .course-card__name span a {
+  color: #DADDFF;
+}
+
+.education .course-card__institution {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
+}
+
+.education .course-card__institution span {
+  color: white;
+  font-size: 14px;
+}
+
+.education .course-card__institution img {
+  width: 20px;
+  margin-right: 5px;
 }
 
 footer {
@@ -643,5 +730,6 @@ footer {
 
 footer p {
   margin: 20px 0;
+  color: #B3BAFF;
 }
 /*# sourceMappingURL=main.css.map */
