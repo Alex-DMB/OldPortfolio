@@ -86,10 +86,6 @@ h2 {
   margin-right: 5px;
 }
 
-.big-icon img {
-  width: 50px;
-}
-
 /* Page Container */
 .content {
   width: 960px;
@@ -329,8 +325,8 @@ header li + li {
           align-items: center;
   background: #32354B;
   border-radius: 10px;
-  -webkit-box-shadow: 0px 20px 100px 10px black;
-          box-shadow: 0px 20px 100px 10px black;
+  -webkit-box-shadow: 0px 20px 50px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 20px 50px 10px rgba(0, 0, 0, 0.5);
   overflow: hidden;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -340,6 +336,10 @@ header li + li {
 .services .card:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
+}
+
+.services .card img {
+  width: 50px;
 }
 
 .services .card::before {
@@ -518,6 +518,105 @@ header li + li {
   -o-border-image: linear-gradient(to right, transparent, #B3BAFF, transparent) 1;
      border-image: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(#B3BAFF), to(transparent)) 1;
      border-image: linear-gradient(to right, transparent, #B3BAFF, transparent) 1;
+}
+
+.abilities .technologies-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 960px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.abilities .technology-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #32354B;
+  border-radius: 10px;
+  margin: 0 15px 50px 15px;
+  -webkit-box-shadow: 0px 20px 50px 1px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 20px 50px 1px rgba(0, 0, 0, 0.5);
+  padding: 30px;
+  overflow: hidden;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.abilities .technology-card img {
+  margin-bottom: 10px;
+}
+
+.abilities .technology-card:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.abilities .large img {
+  width: 150px;
+}
+
+.abilities .medium img {
+  width: 85px;
+}
+
+.abilities .small img {
+  width: 40px;
+}
+
+.abilities .technology-card__name span {
+  color: #DADDFF;
+}
+
+.abilities .technology-card::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 200%;
+  margin-top: -150px;
+  background: -webkit-gradient(linear, right top, left top, from(#32354B), color-stop(#B3BAFF), to(#32354B));
+  background: linear-gradient(to left, #32354B, #B3BAFF, #32354B);
+  -webkit-animation: animate 6s linear infinite;
+          animation: animate 6s linear infinite;
+}
+
+.abilities .technology-card::after {
+  content: '';
+  position: absolute;
+  background: #32354B;
+  inset: 3px;
+  border-radius: 10px;
+}
+
+@keyframes animate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.abilities .technology-card, .abilities .technology-card__icon, .abilities .technology-card__name {
+  z-index: 2;
+  position: relative;
 }
 
 .formation {
