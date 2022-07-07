@@ -1,3 +1,5 @@
+ScrollReveal().reveal('.scrollReveal',{ duration: 1500, reset: true, distance: '120px' } );
+
 var swiper = new Swiper(".swiper", {
     slidesPerView: 3,
     spaceBetween: 0,
