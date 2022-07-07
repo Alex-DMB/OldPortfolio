@@ -2,54 +2,39 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box; 
-    cursor: default;
+
 }
-
-/*
-.lighter{color: $color-lighter;}
-.medium{color: $color-medium;}
-.darker{color: $color-darker;}
-*/
-
-
-.bold{font-weight: bold;}
-
-
-li{list-style: none;} 
-
-/* Fonts */
-li a,h1,h2{font-family: 'Bebas Neue', arial; letter-spacing: 2px; font-weight: 400;}
-li a,span a{cursor: pointer;}
-span,p{font-family: 'Roboto', arial;}
-
-
-p{font-size: 14px; color: $color-lighter;}
-span{font-size: 20px; color: $color-lighter}
-h1{font-size: 30px; color: $color-medium; display: flex; justify-content: center;}
-h2{font-size: 20px; color: $color-darker; display: flex; justify-content: center; margin-bottom: -10px;}
-
-
-
 
 /* Espaçamento do Site */
 
 $spacing: 150px;
-.title{padding-top: $spacing;}
-
-/* Icons */
-
-.little-icon img{width: 20px; margin-right: 5px;}
 
 /* Page Container */
 
 .content {width: 960px; margin: 0 auto; display: flex; align-items: center; justify-content: center; padding: $spacing 0;}
 
+/* Fonts */
 
+li a,h1,h2{font-family: 'Bebas Neue', arial; letter-spacing: 1.5px; font-weight: 400;}
+span,p{font-family: 'Roboto', arial; cursor: default;}
+
+li{list-style: none;} 
+a{cursor: pointer;}
+
+p{font-size: 14px; color: $color-lighter;}
+span{font-size: 20px; color: $color-lighter}
+
+h1{font-size: 30px; color: $color-medium; display: flex; justify-content: center; cursor: default;}
+h2{font-size: 20px; color: $color-darker; display: flex; justify-content: center; margin-bottom: -10px; cursor: default;}
+.title{padding-top: $spacing;}
+
+/* Icon */
+
+.button-icon img{width: 20px; margin-right: 5px; cursor: pointer;}
 
 /* Buttons */
 
-.buttons{display: flex;}
-.button-larger{width: 180px;}
+
 button{
     border-radius: 10px;
     background-color: rgba(0,0,0,.0);
@@ -72,6 +57,9 @@ button{
     p{cursor: pointer;}
 }
 
+.buttons{display: flex;}
+
+.button-larger{width: 180px;}
 
 .button-darker{background: rgba($color: $color-darker, $alpha: 0.8);
 &:hover{background: rgba($color-darker,0.2);}

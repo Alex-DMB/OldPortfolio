@@ -1,38 +1,32 @@
 .web{
     background-image: $gradient-inclined;
     border-top: 2px solid;
-    border-image: linear-gradient(to right, $color-darker, transparent) 1;
-}
+    border-image: linear-gradient(to right, $color-darker, $bg-lighter) 1;
 
-.project{margin-bottom: $spacing;}
-
-.project-screen{display: flex; align-items: center; justify-content: center;}
-
-.screen-desktop,
-.screen-mobile,
-.screen-tablet{
-    outline: 2px solid $color-darker;
-    box-shadow: 0px 10px 40px 1px;
-}
-
-
-.screen-desktop{
-    width: 400px;
-    margin-right: 30px;
+    .project{margin-bottom: $spacing;
+        
+        p{margin-right: 4px; display: inline; letter-spacing: 1.25px;}
     
-}
-.screen-mobile{
-    height: 300px;
-    margin-right: 30px;
-}
-.screen-tablet{
-    height: 300px;
-}
+        .project-screens{display: flex; align-items: center; justify-content: center;
 
-.project p{margin-right: 4px; display: inline; letter-spacing: 1px;}
+            .screen-desktop,
+            .screen-mobile,
+            .screen-tablet{
+                outline: 2px solid $color-darker;
+                box-shadow: 0px 10px 40px 1px;
+                transition: .5s;
+                &:hover{transform: scale(1.05);}
+            }
+        
+        }
+        
+        .screen-desktop{ width:  400px;  margin-right: 30px; }
+        .screen-mobile{  height: 300px;  margin-right: 30px; }
+        .screen-tablet{  height: 300px; }
+        
+        .project-info{margin: 50px 0; max-width: 700px;
+            &__name, &__technologies, &__descrition{margin-bottom: 10px;}
+            &__name :nth-child(1), &__technologies :nth-child(1), &__descrition :nth-child(1){ color: $color-medium; }  }
 
-.project-info{margin: 50px 0; max-width: 700px;}
-
-.project-info__name, .project-info__technologies, .project-info__descrition{margin-bottom: 10px;}
-
-
+    }
+}  

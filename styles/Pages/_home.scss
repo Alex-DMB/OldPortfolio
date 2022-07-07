@@ -1,23 +1,18 @@
 .home {
+    
     background-image: $gradient-inclined;
-}
+    
+    .presentation {width: 480px;}
 
+    .presentation__name {margin-bottom: 24px;}
 
-.presentation {
-    width: 480px;
-}
+    #myName {
+        color: $color-darker;
+        font-size: 35px;
+        font-family: "Roboto";
+        font-weight: bold;
+    }
 
-.presentation__name {
-    margin-bottom: 24px;
-}
+    .art img {width: 480px;}
 
-#myName {
-    color: $color-darker;
-    font-size: 35px;
-    font-family: "Roboto";
-    font-weight: bold;
-}
-
-.art img {
-    width: 480px;
 }

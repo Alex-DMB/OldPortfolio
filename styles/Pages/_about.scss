@@ -5,22 +5,32 @@
     
     #about-me{margin: 20px 0;}
 
+    .text{
+        margin-left: 20px;
+        max-width: 385px;
+        span{font-weight: bold; color: $color-medium;}
+    }
 
+    .icon-email{display: flex; align-items: start;}
 
-.text{
-margin-left: 20px;
-max-width: 385px;
-}
+    .profile-pic{
+        border: 2px solid $color-darker; 
+        z-index: 2; 
+        border-radius: 5px; 
+        width: 200px;
+        transition: .5s;
+        &:hover{transform: scale(1.02);}
+    }
 
+    .shadow{
+        background-image: linear-gradient(to bottom, rgba($color-darker,0.5), transparent);
+        height: 265px; 
+        width: 200px; 
+        position: absolute; 
+        border-radius: 5px;
+        transform: translate(-224px, -24px); 
+        z-index: 1;
+    }
 
-
-.icon-email{display: flex; align-items: start;}
-
-.profile-pic{border: 2px solid $color-darker; z-index: 2; border-radius: 5px; width: 200px;}
-
-.shadow{
-background-image: linear-gradient(to bottom, rgba($color-darker,0.5), transparent);
-height: 265px; width: 200px; position: absolute; border-radius: 5px;
-transform: translate(-224px, -24px); z-index: 1;}
 }
 
