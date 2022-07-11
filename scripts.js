@@ -1,4 +1,10 @@
-ScrollReveal().reveal('.scrollReveal',{ duration: 1500, reset: true, distance: '120px' } );
+const toggleButton = document.getElementById("toggle");
+
+toggleButton.addEventListener("click", function(){
+  document.body.classList.toggle("light-mode");
+})
+
+ScrollReveal().reveal('.scrollReveal',{ duration: 1500, reset: false, distance: '120px' } );
 
 var swiper = new Swiper(".swiper", {
     slidesPerView: 3,

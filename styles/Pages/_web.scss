@@ -1,7 +1,7 @@
 .web{
-    background-image: $gradient-inclined;
+    background-image: var(--gradient-inclined);
     border-top: 2px solid;
-    border-image: linear-gradient(to right, $color-darker, $bg-lighter) 1;
+    border-image: linear-gradient(to right, var(--color-darker), var(--bg-lighter)) 1;
 
     .project{margin-bottom: $spacing;
         
@@ -12,8 +12,8 @@
             .screen-desktop,
             .screen-mobile,
             .screen-tablet{
-                outline: 2px solid $color-darker;
-                box-shadow: 0px 10px 40px 1px;
+                outline: 2px solid var(--color-darker);
+                box-shadow: 0px 10px 40px 1px black;
                 transition: .5s;
                 &:hover{transform: scale(1.05);}
             }
@@ -26,7 +26,7 @@
         
         .project-info{margin: 50px 0; max-width: 700px;
             &__name, &__technologies, &__descrition{margin-bottom: 10px;}
-            &__name :nth-child(1), &__technologies :nth-child(1), &__descrition :nth-child(1){ color: $color-medium; }  }
+            &__name :nth-child(1), &__technologies :nth-child(1), &__descrition :nth-child(1){ color: var(--color-medium); }  }
 
     }
 }  

@@ -11,15 +11,16 @@ header{
     top: 0;
     z-index: 3;
     border-bottom: 1px solid;
-    border-image: linear-gradient(to left, transparent, rgba($color-darker,0.5), transparent) 1;
+    border-image: linear-gradient(to left, transparent, rgba(var(--color-darker),0.5), transparent) 1;
     box-shadow: 0px 0px 100px 1px black;
     
-
+    
     
     #logo{height: 42px; margin-right: auto; margin-top: 10px; margin-bottom: 10px;}
-    ul{display: flex;  margin-left: auto;}
-    a{text-decoration: none; color: $color-lighter; font-size: 20px; letter-spacing: 2px;}
+    ul{display: flex;  margin-left: auto; }
+    a{text-decoration: none; color: var(--color-lighter); font-size: 20px; letter-spacing: 2px;}
     li + li{ margin-left: 32px;}
+    ul li{transition:.5s; &:hover{transform: scale(1.05);}}
 
 
 }

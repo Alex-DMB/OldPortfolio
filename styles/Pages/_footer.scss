@@ -2,8 +2,9 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: $bg-darker;
+    background: var(--bg-darker);
 
 
-    p{margin: 20px 0; color: $color-darker;}
+    p{margin: 20px 0; color: var(--color-darker);}
 }
+

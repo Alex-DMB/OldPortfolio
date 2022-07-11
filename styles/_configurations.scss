@@ -5,6 +5,8 @@
 
 }
 
+
+
 /* Espaçamento do Site */
 
 $spacing: 150px;
@@ -21,11 +23,11 @@ span,p{font-family: 'Roboto', arial; cursor: default;}
 li{list-style: none;} 
 a{cursor: pointer;}
 
-p{font-size: 14px; color: $color-lighter;}
-span{font-size: 20px; color: $color-lighter}
+p{font-size: 14px; color: var(--color-lighter);}
+span{font-size: 20px; color: var(--color-lighter)}
 
-h1{font-size: 30px; color: $color-medium; display: flex; justify-content: center; cursor: default;}
-h2{font-size: 20px; color: $color-darker; display: flex; justify-content: center; margin-bottom: -10px; cursor: default;}
+h1{font-size: 30px; color: var(--color-medium); display: flex; justify-content: center; cursor: default;}
+h2{font-size: 20px; color: var(--color-darker); display: flex; justify-content: center; margin-bottom: -10px; cursor: default;}
 .title{padding-top: $spacing;}
 
 /* Icon */
@@ -38,12 +40,12 @@ h2{font-size: 20px; color: $color-darker; display: flex; justify-content: center
 button{
     border-radius: 10px;
     background-color: rgba(0,0,0,.0);
-    color: $color-lighter;
+    color: var(--color-lighter);
     font-weight: bold;
     width: 150px;
     height: 50px;
     margin-right: 12px;
-    border: 2px solid #B3BAFF;
+    border: 2px solid var(--color-darker);
     cursor: pointer;
     text-transform: uppercase;
     display: flex;
@@ -51,7 +53,7 @@ button{
     align-items: center;
 
     img{width: 20px; margin-right: 5px;}
-    &:hover{background: rgba($color: $color-darker, $alpha: 0.8); transform: scale(1.05);}
+    &:hover{background: rgba(var(--color-darker), $alpha: 0.8); transform: scale(1.05);}
     transition: 0.2s;
 
     p{cursor: pointer;}
@@ -60,7 +62,3 @@ button{
 .buttons{display: flex;}
 
 .button-larger{width: 180px;}
-
-.button-darker{background: rgba($color: $color-darker, $alpha: 0.8);
-&:hover{background: rgba($color-darker,0.2);}
-}

@@ -1,4 +1,16 @@
 @charset "UTF-8";
+:root {
+  --color-lighter: white;
+  --color-medium: #DADDFF;
+  --color-darker: #B3BAFF;
+  --bg-lighter: #32354B;
+  --bg-medium: #2A2D40;
+  --bg-darker: #11121A;
+  --gradient-inclined: linear-gradient(-45deg, var(--bg-darker),  var(--bg-lighter),    var(--bg-darker));
+  --gradient-top: linear-gradient(to bottom,   var(--bg-darker),    var(--bg-lighter));
+  --gradient-top-dark: linear-gradient(to bottom,  var(--bg-darker),   var(--bg-medium));
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -45,17 +57,17 @@ a {
 
 p {
   font-size: 14px;
-  color: white;
+  color: var(--color-lighter);
 }
 
 span {
   font-size: 20px;
-  color: white;
+  color: var(--color-lighter);
 }
 
 h1 {
   font-size: 30px;
-  color: #DADDFF;
+  color: var(--color-medium);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -67,7 +79,7 @@ h1 {
 
 h2 {
   font-size: 20px;
-  color: #B3BAFF;
+  color: var(--color-darker);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -93,12 +105,12 @@ h2 {
 button {
   border-radius: 10px;
   background-color: rgba(0, 0, 0, 0);
-  color: white;
+  color: var(--color-lighter);
   font-weight: bold;
   width: 150px;
   height: 50px;
   margin-right: 12px;
-  border: 2px solid #B3BAFF;
+  border: 2px solid var(--color-darker);
   cursor: pointer;
   text-transform: uppercase;
   display: -webkit-box;
@@ -120,7 +132,7 @@ button img {
 }
 
 button:hover {
-  background: rgba(179, 186, 255, 0.8);
+  background: rgba(var(--color-darker), 0.8);
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
 }
@@ -139,12 +151,112 @@ button p {
   width: 180px;
 }
 
-.button-darker {
-  background: rgba(179, 186, 255, 0.8);
+#toggle {
+  cursor: pointer;
+  margin-left: 35px;
+  position: relative;
+  display: block;
+  width: 50px;
+  height: 25px;
+  border-radius: 20px;
+  background: var(--color-medium);
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
-.button-darker:hover {
-  background: rgba(179, 186, 255, 0.2);
+#toggle .indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 25px;
+  height: 25px;
+  background: var(--bg-lighter);
+  border-radius: 50%;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.light-mode {
+  --color-lighter: #656ca8;
+  --color-medium: #878cba;
+  --color-darker: #97a1ff;
+  --color-bordertop: #b8bedd;
+  --bg-lighter: #efefff;
+  --bg-medium: #ffeef6;
+  --bg-darker: #ffeef6;
+  --filter-color: invert(41%) sepia(100%) saturate(230%) hue-rotate(195deg) brightness(76%) contrast(87%);
+  --gradient-inclined: linear-gradient(-45deg, var(--bg-darker),  var(--bg-lighter),    var(--bg-darker));
+  --gradient-top: linear-gradient(-45deg, var(--bg-darker),  var(--bg-lighter),    var(--bg-darker));
+  --gradient-top-dark: linear-gradient(-45deg, var(--bg-darker),  var(--bg-lighter),    var(--bg-darker));
+}
+
+.light-mode #toggle {
+  background: var(--color-lighter);
+}
+
+.light-mode #toggle .indicator {
+  left: 25px;
+  background: var(--bg-darker);
+}
+
+.light-mode header {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px 0px 50px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 0px 50px 1px rgba(0, 0, 0, 0.2);
+}
+
+.light-mode header #logo {
+  -webkit-filter: var(--filter-color);
+          filter: var(--filter-color);
+}
+
+.light-mode button img, .light-mode .button-icon img, .light-mode .services img, .light-mode .course-card__institution img {
+  -webkit-filter: var(--filter-color);
+          filter: var(--filter-color);
+}
+
+.light-mode .about, .light-mode .services, .light-mode .web, .light-mode .design, .light-mode .abilities, .light-mode .education {
+  border-top: 2px solid;
+  -o-border-image: linear-gradient(to right, var(--color-bordertop), transparent, var(--color-bordertop)) 1;
+     border-image: -webkit-gradient(linear, left top, right top, from(var(--color-bordertop)), color-stop(transparent), to(var(--color-bordertop))) 1;
+     border-image: linear-gradient(to right, var(--color-bordertop), transparent, var(--color-bordertop)) 1;
+}
+
+.light-mode .services .card {
+  -webkit-box-shadow: 0px 20px 50px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 20px 50px 10px rgba(0, 0, 0, 0.2);
+}
+
+.light-mode .web .projects .project-screens .screen-desktop,
+.light-mode .web .projects .project-screens .screen-mobile,
+.light-mode .web .projects .project-screens .screen-tablet {
+  -webkit-box-shadow: 0px 10px 40px 1px rgba(0, 0, 0, 0.7);
+          box-shadow: 0px 10px 40px 1px rgba(0, 0, 0, 0.7);
+}
+
+.light-mode .designer .card-content img {
+  -webkit-box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.4);
+          box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.4);
+}
+
+.light-mode .abilities .technology-card {
+  -webkit-box-shadow: 0px 20px 50px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 20px 50px 1px rgba(0, 0, 0, 0.2);
+}
+
+.light-mode .education .education-container .course-card {
+  -webkit-box-shadow: 0px 10px 30px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 10px 30px 10px rgba(0, 0, 0, 0.2);
+}
+
+.light-mode footer {
+  background: var(--color-lighter);
+}
+
+.light-mode footer p {
+  color: var(--bg-lighter);
 }
 
 header {
@@ -156,9 +268,9 @@ header {
   top: 0;
   z-index: 3;
   border-bottom: 1px solid;
-  -o-border-image: linear-gradient(to left, transparent, rgba(179, 186, 255, 0.5), transparent) 1;
-     border-image: -webkit-gradient(linear, right top, left top, from(transparent), color-stop(rgba(179, 186, 255, 0.5)), to(transparent)) 1;
-     border-image: linear-gradient(to left, transparent, rgba(179, 186, 255, 0.5), transparent) 1;
+  -o-border-image: linear-gradient(to left, transparent, rgba(var(--color-darker), 0.5), transparent) 1;
+     border-image: -webkit-gradient(linear, right top, left top, from(transparent), color-stop(rgba(var(--color-darker), 0.5)), to(transparent)) 1;
+     border-image: linear-gradient(to left, transparent, rgba(var(--color-darker), 0.5), transparent) 1;
   -webkit-box-shadow: 0px 0px 100px 1px black;
           box-shadow: 0px 0px 100px 1px black;
 }
@@ -193,7 +305,7 @@ header ul {
 
 header a {
   text-decoration: none;
-  color: white;
+  color: var(--color-lighter);
   font-size: 20px;
   letter-spacing: 2px;
 }
@@ -202,8 +314,18 @@ header li + li {
   margin-left: 32px;
 }
 
+header ul li {
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+header ul li:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
 .home {
-  background-image: linear-gradient(-45deg, #11121A, #32354B, #11121A);
+  background-image: var(--gradient-inclined);
 }
 
 .home .presentation {
@@ -215,7 +337,7 @@ header li + li {
 }
 
 .home #myName {
-  color: #B3BAFF;
+  color: var(--color-darker);
   font-size: 35px;
   font-family: "Roboto";
   font-weight: bold;
@@ -223,15 +345,21 @@ header li + li {
 
 .home .art img {
   width: 480px;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.home .art img:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 .about {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#11121A), to(#32354B));
-  background-image: linear-gradient(to bottom, #11121A, #32354B);
+  background-image: var(--gradient-top);
   border-top: 2px solid;
-  -o-border-image: linear-gradient(to left, #B3BAFF, transparent) 1;
-     border-image: -webkit-gradient(linear, right top, left top, from(#B3BAFF), to(transparent)) 1;
-     border-image: linear-gradient(to left, #B3BAFF, transparent) 1;
+  -o-border-image: linear-gradient(to left, var(--color-darker), transparent) 1;
+     border-image: -webkit-gradient(linear, right top, left top, from(var(--color-darker)), to(transparent)) 1;
+     border-image: linear-gradient(to left, var(--color-darker), transparent) 1;
 }
 
 .about #about-me {
@@ -245,7 +373,7 @@ header li + li {
 
 .about .text span {
   font-weight: bold;
-  color: #DADDFF;
+  color: var(--color-medium);
 }
 
 .about .icon-email {
@@ -258,7 +386,7 @@ header li + li {
 }
 
 .about .profile-pic {
-  border: 2px solid #B3BAFF;
+  border: 2px solid var(--color-darker);
   z-index: 2;
   border-radius: 5px;
   width: 200px;
@@ -272,8 +400,8 @@ header li + li {
 }
 
 .about .shadow {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(179, 186, 255, 0.5)), to(transparent));
-  background-image: linear-gradient(to bottom, rgba(179, 186, 255, 0.5), transparent);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(151, 161, 255, 0.5)), to(transparent));
+  background-image: linear-gradient(to bottom, rgba(151, 161, 255, 0.5), transparent);
   height: 265px;
   width: 200px;
   position: absolute;
@@ -284,12 +412,11 @@ header li + li {
 }
 
 .services {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#11121A), to(#32354B));
-  background-image: linear-gradient(to bottom, #11121A, #32354B);
+  background-image: var(--gradient-top-dark);
   border-top: 2px solid;
-  -o-border-image: linear-gradient(to right, transparent, #B3BAFF, transparent) 1;
-     border-image: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(#B3BAFF), to(transparent)) 1;
-     border-image: linear-gradient(to right, transparent, #B3BAFF, transparent) 1;
+  -o-border-image: linear-gradient(to right, transparent, var(--color-darker), transparent) 1;
+     border-image: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(var(--color-darker)), to(transparent)) 1;
+     border-image: linear-gradient(to right, transparent, var(--color-darker), transparent) 1;
 }
 
 .services .card {
@@ -309,7 +436,7 @@ header li + li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #32354B;
+  background: var(--bg-lighter);
   border-radius: 10px;
   -webkit-box-shadow: 0px 20px 50px 10px rgba(0, 0, 0, 0.5);
           box-shadow: 0px 20px 50px 10px rgba(0, 0, 0, 0.5);
@@ -342,7 +469,7 @@ header li + li {
 }
 
 .services .card__title span {
-  color: #DADDFF;
+  color: var(--color-medium);
   font-weight: bold;
 }
 
@@ -358,8 +485,8 @@ header li + li {
   position: absolute;
   width: 300px;
   height: 200%;
-  background: -webkit-gradient(linear, right top, left top, from(#32354B), color-stop(#B3BAFF), to(#32354B));
-  background: linear-gradient(to left, #32354B, #B3BAFF, #32354B);
+  background: -webkit-gradient(linear, right top, left top, from(var(--bg-lighter)), color-stop(var(--color-darker)), to(var(--bg-lighter)));
+  background: linear-gradient(to left, var(--bg-lighter), var(--color-darker), var(--bg-lighter));
   -webkit-animation: animate 6s linear infinite;
           animation: animate 6s linear infinite;
 }
@@ -367,7 +494,7 @@ header li + li {
 .services .card::after {
   content: '';
   position: absolute;
-  background: #32354B;
+  background: var(--bg-lighter);
   inset: 3px;
   border-radius: 10px;
 }
@@ -395,11 +522,11 @@ header li + li {
 }
 
 .web {
-  background-image: linear-gradient(-45deg, #11121A, #32354B, #11121A);
+  background-image: var(--gradient-inclined);
   border-top: 2px solid;
-  -o-border-image: linear-gradient(to right, #B3BAFF, #32354B) 1;
-     border-image: -webkit-gradient(linear, left top, right top, from(#B3BAFF), to(#32354B)) 1;
-     border-image: linear-gradient(to right, #B3BAFF, #32354B) 1;
+  -o-border-image: linear-gradient(to right, var(--color-darker), var(--bg-lighter)) 1;
+     border-image: -webkit-gradient(linear, left top, right top, from(var(--color-darker)), to(var(--bg-lighter))) 1;
+     border-image: linear-gradient(to right, var(--color-darker), var(--bg-lighter)) 1;
 }
 
 .web .project {
@@ -427,9 +554,9 @@ header li + li {
 .web .project .project-screens .screen-desktop,
 .web .project .project-screens .screen-mobile,
 .web .project .project-screens .screen-tablet {
-  outline: 2px solid #B3BAFF;
-  -webkit-box-shadow: 0px 10px 40px 1px;
-          box-shadow: 0px 10px 40px 1px;
+  outline: 2px solid var(--color-darker);
+  -webkit-box-shadow: 0px 10px 40px 1px black;
+          box-shadow: 0px 10px 40px 1px black;
   -webkit-transition: .5s;
   transition: .5s;
 }
@@ -465,15 +592,15 @@ header li + li {
 }
 
 .web .project .project-info__name :nth-child(1), .web .project .project-info__technologies :nth-child(1), .web .project .project-info__descrition :nth-child(1) {
-  color: #DADDFF;
+  color: var(--color-medium);
 }
 
 .designer {
-  background-image: linear-gradient(-45deg, #11121A, #32354B, #11121A);
+  background-image: var(--gradient-inclined);
   border-top: 2px solid;
-  -o-border-image: linear-gradient(to right, #B3BAFF, transparent, #B3BAFF) 1;
-     border-image: -webkit-gradient(linear, left top, right top, from(#B3BAFF), color-stop(transparent), to(#B3BAFF)) 1;
-     border-image: linear-gradient(to right, #B3BAFF, transparent, #B3BAFF) 1;
+  -o-border-image: linear-gradient(to right, var(--color-darker), transparent, var(--color-darker)) 1;
+     border-image: -webkit-gradient(linear, left top, right top, from(var(--color-darker)), color-stop(transparent), to(var(--color-darker))) 1;
+     border-image: linear-gradient(to right, var(--color-darker), transparent, var(--color-darker)) 1;
 }
 
 .designer section {
@@ -504,7 +631,7 @@ header li + li {
 }
 
 .designer section .card-content img {
-  border: 2px solid #B3BAFF;
+  border: 2px solid var(--color-darker);
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
   opacity: 80%;
@@ -520,23 +647,22 @@ header li + li {
 
 .designer section .swiper-button-next, .designer section .swiper-button-prev {
   opacity: 0.7;
-  color: #B3BAFF;
+  color: var(--color-darker);
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
 .designer section .swiper-button-next:hover, .designer section .swiper-button-prev:hover {
   opacity: 1;
-  color: #B3BAFF;
+  color: var(--color-darker);
 }
 
 .abilities {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#11121A), to(#32354B));
-  background-image: linear-gradient(to bottom, #11121A, #32354B);
+  background-image: var(--gradient-top);
   border-top: 2px solid;
-  -o-border-image: linear-gradient(to right, transparent, #B3BAFF, transparent) 1;
-     border-image: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(#B3BAFF), to(transparent)) 1;
-     border-image: linear-gradient(to right, transparent, #B3BAFF, transparent) 1;
+  -o-border-image: linear-gradient(to right, transparent, var(--color-darker), transparent) 1;
+     border-image: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(var(--color-darker)), to(transparent)) 1;
+     border-image: linear-gradient(to right, transparent, var(--color-darker), transparent) 1;
 }
 
 .abilities .technologies-container {
@@ -566,7 +692,7 @@ header li + li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #32354B;
+  background: var(--bg-lighter);
   border-radius: 10px;
   margin: 0 15px 50px 15px;
   -webkit-box-shadow: 0px 20px 50px 1px rgba(0, 0, 0, 0.5);
@@ -589,7 +715,7 @@ header li + li {
 }
 
 .abilities .technology-card__name span {
-  color: #DADDFF;
+  color: var(--color-medium);
 }
 
 .abilities .technology-card__icon, .abilities .technology-card__name {
@@ -603,8 +729,8 @@ header li + li {
   width: 100%;
   height: 200%;
   margin-top: -150px;
-  background: -webkit-gradient(linear, right top, left top, from(#32354B), color-stop(#B3BAFF), to(#32354B));
-  background: linear-gradient(to left, #32354B, #B3BAFF, #32354B);
+  background: -webkit-gradient(linear, right top, left top, from(var(--bg-lighter)), color-stop(var(--color-darker)), to(var(--bg-lighter)));
+  background: linear-gradient(to left, var(--bg-lighter), var(--color-darker), var(--bg-lighter));
   -webkit-animation: animate 6s linear infinite;
           animation: animate 6s linear infinite;
 }
@@ -612,7 +738,7 @@ header li + li {
 .abilities .technology-card::after {
   content: '';
   position: absolute;
-  background: #32354B;
+  background: var(--bg-lighter);
   inset: 3px;
   border-radius: 10px;
 }
@@ -641,12 +767,11 @@ header li + li {
 }
 
 .education {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#11121A), to(#2A2D40));
-  background-image: linear-gradient(to bottom, #11121A, #2A2D40);
+  background-image: var(--gradient-top-dark);
   border-top: 2px solid;
-  -o-border-image: linear-gradient(to left, transparent, #B3BAFF, transparent) 1;
-     border-image: -webkit-gradient(linear, right top, left top, from(transparent), color-stop(#B3BAFF), to(transparent)) 1;
-     border-image: linear-gradient(to left, transparent, #B3BAFF, transparent) 1;
+  -o-border-image: linear-gradient(to left, transparent, var(--color-darker), transparent) 1;
+     border-image: -webkit-gradient(linear, right top, left top, from(transparent), color-stop(var(--color-darker)), to(transparent)) 1;
+     border-image: linear-gradient(to left, transparent, var(--color-darker), transparent) 1;
 }
 
 .education img {
@@ -691,8 +816,8 @@ header li + li {
   width: 450px;
   margin: 0 15px;
   padding: 30px;
-  background: #32354B;
-  border: 2px solid #B3BAFF;
+  background: var(--bg-lighter);
+  border: 2px solid var(--color-darker);
   border-radius: 10px;
   -webkit-box-shadow: 0px 10px 30px 10px rgba(0, 0, 0, 0.5);
           box-shadow: 0px 10px 30px 10px rgba(0, 0, 0, 0.5);
@@ -714,7 +839,7 @@ header li + li {
 }
 
 .education .education-container .course-card__status span {
-  color: #B3BAFF;
+  color: var(--color-darker);
   font-size: 14px;
 }
 
@@ -723,7 +848,7 @@ header li + li {
 }
 
 .education .education-container .course-card__name span, .education .education-container .course-card__name span a {
-  color: #DADDFF;
+  color: var(--color-medium);
 }
 
 .education .education-container .course-card__institution {
@@ -741,7 +866,7 @@ header li + li {
 }
 
 .education .education-container .course-card__institution span {
-  color: white;
+  color: var(--color-lighter);
   font-size: 14px;
 }
 
@@ -760,11 +885,11 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #11121A;
+  background: var(--bg-darker);
 }
 
 footer p {
   margin: 20px 0;
-  color: #B3BAFF;
+  color: var(--color-darker);
 }
 /*# sourceMappingURL=main.css.map */

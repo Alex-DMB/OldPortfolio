@@ -1,7 +1,7 @@
 .education {
-    background-image: $gradient-top-dark;
+    background-image: var(--gradient-top-dark);
     border-top: 2px solid;
-    border-image: linear-gradient(to left, transparent,$color-darker,transparent) 1;
+    border-image: linear-gradient(to left, transparent,var(--color-darker),transparent) 1;
 
     img{width: 50px;}
 
@@ -19,8 +19,8 @@
             width: 450px;
             margin: 0 15px;
             padding: 30px;
-            background: $bg-lighter;
-            border: 2px solid $color-darker;
+            background: var(--bg-lighter);
+            border: 2px solid var(--color-darker);
             border-radius: 10px;
             box-shadow: 0px 10px 30px 10px rgba(black,.5);
             span{font-weight: bold;}
@@ -29,16 +29,16 @@
             &:hover{transform: scale(1.05);}
 
             &__status{
-                span{color: $color-darker; font-size: 14px;} margin-bottom: 5px;}
+                span{color: var(--color-darker); font-size: 14px;} margin-bottom: 5px;}
 
             &__name{
-                span,span a{color: $color-medium;} margin-bottom: 10px;}
+                span,span a{color: var(--color-medium);} margin-bottom: 10px;}
         
             &__institution{
                 display: flex;
                 flex-direction: row;
                 align-items: center;
-                span{color: $color-lighter; font-size: 14px;}
+                span{color: var(--color-lighter); font-size: 14px;}
                 margin-bottom: 20px;
                 
                 img{width: 20px; margin-right: 5px;}

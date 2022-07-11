@@ -15,6 +15,7 @@
         <title>Alex de Matos</title>
     </head>
     <body>
+        
         <header>
             <div class="header">
                 <img id="logo" src="img/Logo.png" alt="Logo escrita Alex DMB" />
@@ -28,10 +29,14 @@
                         <li><a href="#education">Educação</a></li>
                     </ul>
                 </nav>
+                <div id="toggle">
+                    <i class="indicator"></i>
+                </div>
             </div>
         </header>
 
         <main>
+            
             <div class="home " id="home">
                 <div class="content">
                     <div class="presentation">
@@ -85,7 +90,7 @@
                         </p>
 
                         <div class="buttons">
-                            <button class="button-darker" onclick="window.open('curriculo')">
+                            <button onclick="window.open('curriculo')">
                                 <img src="img/Little_Icons/icon_download.png" />
                                 <p>Currículo</p>
                             </button>
@@ -265,10 +270,10 @@
                 <div class="title">
                     <h1>Habilidades</h1>
                 </div>
-                <div class="content scrollReveal">
+                <div class="content">
 
-                    <div class="abilities-container">
-                        <div class="technologies-container large">    
+                    <div class="abilities-container z">
+                        <div class="technologies-container large scrollReveal">    
                             <div class="technology-card">
                                 <div class="technology-card__icon"><img src="img/Technologies/Icons_Optimized/HTML.png" alt="ícone do HTML"></div>
                                 <div class="technology-card__name"><span>HTML</span></div>
@@ -285,7 +290,7 @@
                             </div>
                         </div>
 
-                        <div class="technologies-container medium">    
+                        <div class="technologies-container medium scrollReveal">    
                             <div class="technology-card">
                                 <div class="technology-card__icon"><img src="img/Technologies/Icons_Optimized/Git.png" alt="ícone do Git"></div>
                                 <div class="technology-card__name"><span>Git</span></div>

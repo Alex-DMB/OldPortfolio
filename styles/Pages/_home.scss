@@ -1,18 +1,22 @@
 .home {
     
-    background-image: $gradient-inclined;
+    background-image: var(--gradient-inclined) 
+    ;
     
     .presentation {width: 480px;}
 
     .presentation__name {margin-bottom: 24px;}
 
     #myName {
-        color: $color-darker;
+        color: var(--color-darker);
         font-size: 35px;
         font-family: "Roboto";
         font-weight: bold;
     }
 
-    .art img {width: 480px;}
+    .art img {width: 480px; transition: .5s;
+    &:hover{ transform: scale(1.05);}
+    }
+
 
 }

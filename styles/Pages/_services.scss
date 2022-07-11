@@ -1,13 +1,13 @@
 .services{
-    background-image: $gradient-top;
+    background-image: var(--gradient-top-dark);
     border-top: 2px solid;
-    border-image: linear-gradient(to right, transparent, $color-darker, transparent) 1;
+    border-image: linear-gradient(to right, transparent, var(--color-darker), transparent) 1;
 
 
     .card{
         height: 280px; padding: 0 30px; margin: 0 32px;
         display: flex; flex-direction: column; justify-content: center; align-items: center; 
-        background: $bg-lighter;
+        background: var(--bg-lighter);
         border-radius: 10px;
         box-shadow: 0px 20px 50px 10px rgba(black,.5);
         overflow: hidden;
@@ -18,7 +18,7 @@
         position: relative;
 
             &__icon{margin-bottom: 8px; z-index: 2; position: relative;}
-            &__title{margin-bottom: 8px; z-index: 2; position: relative; span{color: $color-medium; font-weight: bold;}}
+            &__title{margin-bottom: 8px; z-index: 2; position: relative; span{color: var(--color-medium); font-weight: bold;}}
             &__descrition p{text-align: center; max-width: 320px; z-index: 2; position: relative;}
         
             &::before {
@@ -26,14 +26,14 @@
                 position: absolute;
                 width: 300px;
                 height: 200%;
-                background: linear-gradient(to left, $bg-lighter, $color-darker, $bg-lighter);
+                background: linear-gradient(to left, var(--bg-lighter), var(--color-darker), var(--bg-lighter));
                 animation: animate 6s linear infinite;
             }
 
             &::after {
                 content: '';
                 position: absolute;
-                background: $bg-lighter;
+                background: var(--bg-lighter);
                 inset: 3px;
                 border-radius: 10px;
             }

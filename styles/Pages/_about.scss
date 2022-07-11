@@ -1,20 +1,20 @@
 .about {
-    background-image: $gradient-top;
+    background-image: var(--gradient-top);
     border-top: 2px solid;
-    border-image: linear-gradient(to left, $color-darker, transparent) 1;
+    border-image: linear-gradient(to left, var(--color-darker), transparent) 1;
     
     #about-me{margin: 20px 0;}
 
     .text{
         margin-left: 20px;
         max-width: 385px;
-        span{font-weight: bold; color: $color-medium;}
+        span{font-weight: bold; color: var(--color-medium);}
     }
 
     .icon-email{display: flex; align-items: start;}
 
     .profile-pic{
-        border: 2px solid $color-darker; 
+        border: 2px solid var(--color-darker); 
         z-index: 2; 
         border-radius: 5px; 
         width: 200px;
@@ -23,7 +23,7 @@
     }
 
     .shadow{
-        background-image: linear-gradient(to bottom, rgba($color-darker,0.5), transparent);
+        background-image: linear-gradient(to bottom, rgba(#97a1ff,.5), transparent);
         height: 265px; 
         width: 200px; 
         position: absolute; 
