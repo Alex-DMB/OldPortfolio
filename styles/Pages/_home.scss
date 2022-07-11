@@ -19,4 +19,16 @@
     }
 
 
+    #myName::after{
+        content:'|';
+        color: var(--color-lighter);
+        margin-left: 5px;
+        opacity: 1;
+        animation: blinkName 1s infinite;
+    }
+
+    @keyframes blinkName {
+        0%,100%{opacity: 1;}
+        50%{opacity: 0;}
+    }
 }

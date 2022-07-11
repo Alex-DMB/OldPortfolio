@@ -354,6 +354,33 @@ header ul li:hover {
           transform: scale(1.05);
 }
 
+.home #myName::after {
+  content: '|';
+  color: var(--color-lighter);
+  margin-left: 5px;
+  opacity: 1;
+  -webkit-animation: blinkName 1s infinite;
+          animation: blinkName 1s infinite;
+}
+
+@-webkit-keyframes blinkName {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes blinkName {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
 .about {
   background-image: var(--gradient-top);
   border-top: 2px solid;
@@ -362,8 +389,9 @@ header ul li:hover {
      border-image: linear-gradient(to left, var(--color-darker), transparent) 1;
 }
 
-.about #about-me {
+.about #aboutMe {
   margin: 20px 0;
+  min-height: 140px;
 }
 
 .about .text {

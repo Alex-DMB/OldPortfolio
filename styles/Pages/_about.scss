@@ -3,7 +3,7 @@
     border-top: 2px solid;
     border-image: linear-gradient(to left, var(--color-darker), transparent) 1;
     
-    #about-me{margin: 20px 0;}
+    #aboutMe{margin: 20px 0; min-height: 140px;}
 
     .text{
         margin-left: 20px;
@@ -32,5 +32,7 @@
         z-index: 1;
     }
 
+
+    
 }
 
