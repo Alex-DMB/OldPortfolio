@@ -15,7 +15,7 @@
     }
 
     .art img {width: 480px; transition: .5s;
-    &:hover{ transform: scale(1.05);}
+    &:hover{transform: scale(1.05); transform: scaleX(-1);}
     }
 
 
@@ -31,4 +31,5 @@
         0%,100%{opacity: 1;}
         50%{opacity: 0;}
     }
+
 }

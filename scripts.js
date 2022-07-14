@@ -24,7 +24,22 @@ function typeWriter(element){
 const name = document.getElementById('myName');
 typeWriter(name);
 
+/* Saiba Mais */
 
+
+const aboutMe = document.getElementById('aboutMe')
+const aboutMoreButton = document.getElementById('aboutMore')
+const aboutMoreText = `Gosto de assistir animes, jogar em Fliperama, sou flamenguista e adoro festas, meus estilos músicais favoritos são Funk e Trap. 
+
+Desenho desde criança, hoje raramente devido ao foco na programação mas nunca perco o jeito, creio que esse seja um dos meus maiores talentos.`
+
+function changeAboutMe(){
+  aboutMoreButton.addEventListener("click",function(){
+    aboutMe.textContent = aboutMoreText
+  })
+}
+
+changeAboutMe()
 
 /* Scroll Reveal */
 

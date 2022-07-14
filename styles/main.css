@@ -352,6 +352,8 @@ header ul li:hover {
 .home .art img:hover {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
 }
 
 .home #myName::after {
