@@ -370,12 +370,12 @@ header #btn-mobile {
     display: block;
     position: absolute;
     right: 0;
-    top: 10px;
+    top: 15px;
   }
   header #logo {
     position: absolute;
-    left: 0;
-    top: 0;
+    left: 10px;
+    top: 10px;
   }
   header #menu {
     width: 100%;
