@@ -6,6 +6,17 @@ toggleButton.addEventListener("click", function(){
   document.body.classList.toggle("light-mode");
 })
 
+/* Menu Mobile */
+const btnMobile = document.getElementById('btn-mobile')
+
+function toggleMenu(){
+const nav = document.getElementById('nav')
+nav.classList.toggle('active')
+
+}
+btnMobile.addEventListener('click', toggleMenu)
+
+
 /* Efeito Digitação */
 
 function typeWriter(element){
@@ -43,8 +54,10 @@ changeAboutMe()
 
 /* Scroll Reveal */
 
-ScrollReveal().reveal('.scrollReveal',{ duration: 1500, reset: false, distance: '120px' } );
+ScrollReveal().reveal('.scrollReveal',{ duration: 1500, reset: false, distance: '120px' } ); 
 
+
+function swiperDesktop(){
 var swiper = new Swiper(".swiper", {
     slidesPerView: 3,
     spaceBetween: 0,
@@ -55,5 +68,32 @@ var swiper = new Swiper(".swiper", {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
-  });
+  }); 
+}
+
+function swiperMobile(){
+  var swiper = new Swiper(".swiper", {
+      slidesPerView: 1,
+      spaceBetween: 0,
+      slidesPerGroup: 1,
+      loop: true,
+      loopFillGroupWithBlank: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    }); 
+  }
   
+
+  if ((window.innerWidth > 959))  {
+
+    swiperDesktop()
+
+    
+    }
+
+    else {
+      swiperMobile()
+
+    }

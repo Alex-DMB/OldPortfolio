@@ -19,7 +19,7 @@
 }
 
 /* Espaçamento do Site */
-/* Page Container */
+/* Page Container Web */
 .content {
   width: 960px;
   margin: 0 auto;
@@ -33,6 +33,38 @@
       -ms-flex-pack: center;
           justify-content: center;
   padding: 150px 0;
+}
+
+/* Page Container Mobile */
+@media screen and (max-width: 767px) {
+  .content {
+    width: 85%;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 150px 0;
+  }
+  .content .buttons {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .content .buttons button {
+    width: 80%;
+    margin-bottom: 30px;
+  }
 }
 
 /* Fonts */
@@ -324,6 +356,84 @@ header ul li:hover {
           transform: scale(1.05);
 }
 
+header #btn-mobile {
+  display: none;
+}
+
+@media screen and (max-width: 480px) {
+  header .header {
+    width: 100%;
+    min-height: 80px;
+    padding: 10px;
+  }
+  header #btn-mobile {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 10px;
+  }
+  header #logo {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  header #menu {
+    width: 100%;
+    display: none;
+  }
+  header #btn-mobile {
+    width: 60px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  header #hamburger {
+    border-top: 2px solid;
+    width: 20px;
+  }
+  header #hamburger::after, header #hamburger::before {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: currentColor;
+    margin-top: 5px;
+  }
+  header #menu li {
+    margin: 10px auto;
+  }
+  header li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 90vw;
+    border-bottom: 1px solid var(--color-darker);
+  }
+  header a {
+    margin: 10px;
+  }
+  header ul {
+    margin-top: 70px;
+  }
+  header #nav.active #menu {
+    -webkit-transition: .5s;
+    transition: .5s;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  header #toggle {
+    margin: 10px auto;
+  }
+}
+
 .home {
   background-image: var(--gradient-inclined);
 }
@@ -383,6 +493,22 @@ header ul li:hover {
   }
 }
 
+@media screen and (max-width: 480px) {
+  .home .presentation {
+    width: 100%;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    margin-top: 32px;
+  }
+  .home .art img {
+    width: 100%;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+}
+
 .about {
   background-image: var(--gradient-top);
   border-top: 2px solid;
@@ -439,6 +565,20 @@ header ul li:hover {
   -webkit-transform: translate(-224px, -24px);
           transform: translate(-224px, -24px);
   z-index: 1;
+}
+
+@media screen and (max-width: 480px) {
+  .about .profile-pic {
+    width: 60%;
+  }
+  .about .shadow {
+    width: 60%;
+    -webkit-transform: translate(-10%, -100%);
+            transform: translate(-10%, -100%);
+  }
+  .about .text {
+    margin-top: 48px;
+  }
 }
 
 .services {
@@ -551,6 +691,13 @@ header ul li:hover {
   }
 }
 
+@media screen and (max-width: 480px) {
+  .services .card {
+    margin-bottom: 48px;
+    width: 100%;
+  }
+}
+
 .web {
   background-image: var(--gradient-inclined);
   border-top: 2px solid;
@@ -561,6 +708,7 @@ header ul li:hover {
 
 .web .project {
   margin-bottom: 150px;
+  width: 885px;
 }
 
 .web .project p {
@@ -576,9 +724,9 @@ header ul li:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .web .project .project-screens .screen-desktop,
@@ -600,12 +748,10 @@ header ul li:hover {
 
 .web .project .screen-desktop {
   width: 400px;
-  margin-right: 30px;
 }
 
 .web .project .screen-mobile {
   height: 300px;
-  margin-right: 30px;
 }
 
 .web .project .screen-tablet {
@@ -623,6 +769,38 @@ header ul li:hover {
 
 .web .project .project-info__name :nth-child(1), .web .project .project-info__technologies :nth-child(1), .web .project .project-info__descrition :nth-child(1) {
   color: var(--color-medium);
+}
+
+@media screen and (max-width: 480px) {
+  .web .project {
+    width: 100%;
+  }
+  .web .project-screens {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .web .screen-desktop {
+    min-width: 300px;
+    max-width: 100%;
+    margin-bottom: 32px;
+  }
+  .web .screen-mobile {
+    height: 100%;
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    margin-bottom: 32px;
+  }
+  .web .screen-tablet {
+    height: 100%;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    margin-bottom: 32px;
+  }
 }
 
 .designer {
@@ -685,6 +863,19 @@ header ul li:hover {
 .designer section .swiper-button-next:hover, .designer section .swiper-button-prev:hover {
   opacity: 1;
   color: var(--color-darker);
+}
+
+@media screen and (max-width: 480px) {
+  .designer section {
+    position: relative;
+    width: 110%;
+  }
+  .designer section img {
+    width: 80%;
+  }
+  .designer section .swiper {
+    width: 80%;
+  }
 }
 
 .abilities {
@@ -796,6 +987,12 @@ header ul li:hover {
   width: 40px;
 }
 
+@media screen and (max-width: 480px) {
+  .abilities .technologies-container {
+    width: 100%;
+  }
+}
+
 .education {
   background-image: var(--gradient-top-dark);
   border-top: 2px solid;
@@ -874,6 +1071,7 @@ header ul li:hover {
 }
 
 .education .education-container .course-card__name {
+  text-align: center;
   margin-bottom: 10px;
 }
 
@@ -903,6 +1101,20 @@ header ul li:hover {
 .education .education-container .course-card__institution img {
   width: 20px;
   margin-right: 5px;
+}
+
+@media screen and (max-width: 480px) {
+  .education .education-container {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .education .education-container .course-card {
+    width: 90%;
+    margin-bottom: 50px;
+  }
 }
 
 footer {

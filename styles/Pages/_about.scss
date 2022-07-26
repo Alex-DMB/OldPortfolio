@@ -33,6 +33,11 @@
     }
 
 
-    
+    @media screen and (max-width: 480px) {
+
+        .profile-pic{width: 60%;}
+        .shadow{width: 60%; transform: translate(-10%, -100%);}
+        .text{margin-top: 48px;}
+}
 }
 

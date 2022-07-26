@@ -1,7 +1,6 @@
 .home {
     
-    background-image: var(--gradient-inclined) 
-    ;
+    background-image: var(--gradient-inclined);
     
     .presentation {width: 480px;}
 
@@ -32,4 +31,14 @@
         50%{opacity: 0;}
     }
 
+
+
+
+    @media screen and (max-width: 480px) {
+
+        .presentation {width: 100%; order: 2; margin-top: 32px;}
+        .art img {width: 100%; order: 1;}
+    }
 }
+
+

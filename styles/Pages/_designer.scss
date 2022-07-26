@@ -32,6 +32,24 @@
       .swiper-button-next:hover, .swiper-button-prev:hover{ opacity: 1; color: var(--color-darker); }
 
     }
+
+
+
+
+    @media screen and (max-width: 480px) {
+        
+        section{
+          position: relative;
+          width: 110%;
+          img{width: 80%;}
+
+          
+
+
+          .swiper{width: 80%;}
+        }
+
+}
 }
 
 

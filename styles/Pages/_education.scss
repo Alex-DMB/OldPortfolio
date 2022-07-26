@@ -32,6 +32,7 @@
                 span{color: var(--color-darker); font-size: 14px;} margin-bottom: 5px;}
 
             &__name{
+                text-align: center;
                 span,span a{color: var(--color-medium);} margin-bottom: 10px;}
         
             &__institution{
@@ -57,7 +58,21 @@
 
 
 
+@media screen and (max-width: 480px) {
 
+
+    .education-container{width: 100%; flex-direction: column;
+        .course-card{
+            width: 90%;
+            margin-bottom: 50px;
+        }
+    }
+
+            
+
+
+
+}
 
 }
 
