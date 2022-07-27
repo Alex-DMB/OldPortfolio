@@ -27,51 +27,51 @@ header{
     }
 
 
-@media screen and (max-width: 480px) {
-    
+    @media screen and (max-width: 959px) {
+        
 
-    .header{width: 100%; min-height: 80px; padding: 10px;}
-    #btn-mobile{display: block; position: absolute; right: 0; top: 15px;}
+        .header{width: 100%; min-height: 80px; padding: 10px;}
+        #btn-mobile{display: block; position: absolute; right: 0; top: 15px;}
 
-    #logo{position: absolute; left: 10px; top: 10px;}
-    #menu{
-    width: 100%; 
-    display: none;
+        #logo{position: absolute; left: 10px; top: 10px;}
+        #menu{
+        width: 100%; 
+        display: none;
+        }
+
+        #btn-mobile{width: 60px; display: flex;}
+        #hamburger{
+            border-top: 2px solid; 
+            width: 20px;}
+        #hamburger::after, #hamburger::before{
+            content: '';
+            display: block;
+            width: 20px;
+            height: 2px;
+            background: currentColor;
+            margin-top: 5px;
+        }
+
+        #menu li{margin: 10px auto;}
+        li{
+            display: flex;
+            justify-content: center;
+            width: 90vw; 
+            border-bottom: 1px solid var(--color-darker);
+        }
+
+        a{margin: 10px;}
+
+        ul{margin-top: 70px;}
+
+        #nav.active #menu{
+            transition: .5s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #toggle{margin: 10px auto;}
+
     }
-
-    #btn-mobile{width: 60px; display: flex;}
-    #hamburger{
-        border-top: 2px solid; 
-        width: 20px;}
-    #hamburger::after, #hamburger::before{
-        content: '';
-        display: block;
-        width: 20px;
-        height: 2px;
-        background: currentColor;
-        margin-top: 5px;
-    }
-
-    #menu li{margin: 10px auto;}
-    li{
-        display: flex;
-        justify-content: center;
-        width: 90vw; 
-        border-bottom: 1px solid var(--color-darker);
-    }
-
-    a{margin: 10px;}
-
-    ul{margin-top: 70px;}
-
-    #nav.active #menu{
-        transition: .5s;
-        display: flex;
-        flex-direction: column;
-    }
-
-    #toggle{margin: 10px auto;}
-
-}
 
 }

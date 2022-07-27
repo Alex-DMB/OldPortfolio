@@ -71,6 +71,20 @@ var swiper = new Swiper(".swiper", {
   }); 
 }
 
+function swiperTablet(){
+  var swiper = new Swiper(".swiper", {
+      slidesPerView: 2,
+      spaceBetween: 0,
+      slidesPerGroup: 2,
+      loop: true,
+      loopFillGroupWithBlank: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    }); 
+  }
+
 function swiperMobile(){
   var swiper = new Swiper(".swiper", {
       slidesPerView: 1,
@@ -91,6 +105,12 @@ function swiperMobile(){
     swiperDesktop()
 
     
+    }
+
+    else if ((window.innerWidth > 767 && window.innerWidth < 960)) {
+
+      swiperTablet()
+
     }
 
     else {

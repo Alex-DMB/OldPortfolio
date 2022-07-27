@@ -67,6 +67,13 @@
   }
 }
 
+/* Page Container Tablet */
+@media screen and (min-width: 768px) and (max-width: 959px) {
+  .content {
+    width: 90%;
+  }
+}
+
 /* Fonts */
 li a, h1, h2 {
   font-family: 'Bebas Neue', arial;
@@ -360,7 +367,7 @@ header #btn-mobile {
   display: none;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 959px) {
   header .header {
     width: 100%;
     min-height: 80px;
@@ -440,6 +447,7 @@ header #btn-mobile {
 
 .home .presentation {
   width: 480px;
+  margin-left: 20px;
 }
 
 .home .presentation__name {
@@ -454,6 +462,7 @@ header #btn-mobile {
 }
 
 .home .art img {
+  margin-right: 20px;
   width: 480px;
   -webkit-transition: .5s;
   transition: .5s;
@@ -493,7 +502,16 @@ header #btn-mobile {
   }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (min-width: 768px) and (max-width: 959px) {
+  .home .presentation {
+    width: 100%;
+  }
+  .home .art img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 767px) {
   .home .presentation {
     width: 100%;
     -webkit-box-ordinal-group: 3;
@@ -567,7 +585,13 @@ header #btn-mobile {
   z-index: 1;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (min-width: 768px) and (max-width: 959px) {
+  .about .content {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 767px) {
   .about .profile-pic {
     width: 60%;
   }
@@ -691,7 +715,7 @@ header #btn-mobile {
   }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 767px) {
   .services .card {
     margin-bottom: 48px;
     width: 100%;
@@ -771,7 +795,24 @@ header #btn-mobile {
   color: var(--color-medium);
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (min-width: 768px) and (max-width: 959px) {
+  .web .project {
+    width: 60%;
+    margin: 0 auto;
+    margin-bottom: 150px;
+  }
+  .web .project-screens {
+    width: 100%;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .web .screen-desktop {
+    margin: 0 auto;
+    margin-bottom: 32px;
+  }
+}
+
+@media screen and (max-width: 767px) {
   .web .project {
     width: 100%;
   }
@@ -865,7 +906,17 @@ header #btn-mobile {
   color: var(--color-darker);
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (min-width: 768px) and (max-width: 959px) {
+  .designer section {
+    position: relative;
+    width: 100%;
+  }
+  .designer section .swiper {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 767px) {
   .designer section {
     position: relative;
     width: 110%;
@@ -987,7 +1038,13 @@ header #btn-mobile {
   width: 40px;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 959px) {
+  .abilities .technologies-container {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 767px) {
   .abilities .technologies-container {
     width: 100%;
   }
@@ -1103,7 +1160,22 @@ header #btn-mobile {
   margin-right: 5px;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 959px) {
+  .education .education-container {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .education .education-container .course-card {
+    margin: 0 auto;
+    width: 60%;
+    margin-bottom: 50px;
+  }
+}
+
+@media screen and (max-width: 767px) {
   .education .education-container {
     width: 100%;
     -webkit-box-orient: vertical;
