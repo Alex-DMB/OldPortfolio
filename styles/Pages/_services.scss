@@ -1,4 +1,6 @@
 .services{
+    display: none;
+
     background-image: var(--gradient-top-dark);
     border-top: 2px solid;
     border-image: linear-gradient(to right, transparent, var(--color-darker), transparent) 1;

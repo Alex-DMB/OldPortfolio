@@ -1,4 +1,4 @@
-/* Light Mode */
+// Light Mode 
 
 const toggleButton = document.getElementById("toggle");
 
@@ -6,7 +6,7 @@ toggleButton.addEventListener("click", function(){
   document.body.classList.toggle("light-mode");
 })
 
-/* Menu Mobile */
+// Mobile Menu //
 const btnMobile = document.getElementById('btn-mobile')
 
 function toggleMenu(){
@@ -17,7 +17,7 @@ nav.classList.toggle('active')
 btnMobile.addEventListener('click', toggleMenu)
 
 
-/* Efeito Digitação */
+// Digitation Effect 
 
 function typeWriter(element){
   const arrayText = element.innerHTML.split('');
@@ -35,7 +35,7 @@ function typeWriter(element){
 const name = document.getElementById('myName');
 typeWriter(name);
 
-/* Saiba Mais */
+// About more
 
 
 const aboutMe = document.getElementById('aboutMe')
@@ -52,10 +52,11 @@ function changeAboutMe(){
 
 changeAboutMe()
 
-/* Scroll Reveal */
+// Scroll Reveal
 
 ScrollReveal().reveal('.scrollReveal',{ duration: 1500, reset: false, distance: '120px' } ); 
 
+// Swiper
 
 function swiperDesktop(){
 var swiper = new Swiper(".swiper", {
@@ -117,3 +118,29 @@ function swiperMobile(){
       swiperMobile()
 
     }
+
+// Smooth Scroll
+
+function smoothScroll(){
+  const internalLinks = document.querySelectorAll('#menu a[href^="#"]')
+
+  internalLinks.forEach((link) => {
+    link.addEventListener('click', scrollToSection)
+  })
+
+
+  function scrollToSection(event){
+    event.preventDefault()
+
+    const href = event.currentTarget.getAttribute('href')
+    const section = document.querySelector(href)
+
+    section.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    })
+
+  }
+}
+
+smoothScroll()
