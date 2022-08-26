@@ -3,6 +3,10 @@
     border-top: 2px solid;
     border-image: linear-gradient(to right, var(--color-darker), var(--bg-lighter)) 1;
 
+
+    .project-info__descrition .tittle{ margin-left: 15px;  display: block}
+    .project-info__descrition .desc{ margin-left: 35px; font-weight: 200; display: block}
+    
     .project{margin-bottom: $spacing; width: 885px;
         
         p{margin-right: 4px; display: inline; letter-spacing: 1.25px;}
